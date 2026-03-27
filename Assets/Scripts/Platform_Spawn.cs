@@ -23,7 +23,8 @@ public class Platform_Spawn : MonoBehaviour
 
         foreach(var obstacle in obsatacles)
         {
-            obstacle.SetActive(Random.value < obstacleRatio);
+            if (obstacle != null)
+                obstacle.SetActive(Random.value < obstacleRatio);
         }
         isStepped = false;
     }

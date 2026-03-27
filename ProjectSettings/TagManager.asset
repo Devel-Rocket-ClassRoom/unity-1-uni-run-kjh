@@ -7,6 +7,8 @@ TagManager:
   - Ground
   - Dead
   - Coin
+  - Obstacle
+  - Platform
   layers:
   - Default
   - TransparentFX
