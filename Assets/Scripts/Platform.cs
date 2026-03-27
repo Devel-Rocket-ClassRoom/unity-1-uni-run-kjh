@@ -38,7 +38,7 @@ public class Platform : MonoBehaviour
         if(collision.gameObject.CompareTag("Player") && !stepped)
         {
             stepped = true; // Set the stepped flag to true when the player steps on the platform
-            GameManager.instance.AddScore(0); // Increase the score by 1
+            GameManager.instance.AddScore(1); // Increase the score by 1
             // You can add any additional logic here that should happen when the player steps on the platform
         }
     }

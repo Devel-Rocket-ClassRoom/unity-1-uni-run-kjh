@@ -19,8 +19,11 @@ public class Controller_Player : MonoBehaviour
     
     CircleCollider2D collider2D; 
 
+    private float health = 100f;    
+    //MeshRenderer meshRenderer;
 
-    
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     private void Awake()
@@ -35,6 +38,7 @@ public class Controller_Player : MonoBehaviour
         playerAudio = GetComponent<AudioSource>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         collider2D = GetComponent<CircleCollider2D>();
+        //meshRenderer = GetComponent<MeshRenderer>();
         spriteRenderer.enabled = false; // Hide the player sprite at the start
 
     }
@@ -72,7 +76,7 @@ public class Controller_Player : MonoBehaviour
         {
             animator.SetBool("Slide", true);
             animator.SetBool("Sliding", true);
-            collider2D.radius = 0.2f;
+            collider2D.radius = 0.3f;
         }
         if (Input.GetButtonUp("Fire2"))
         {
@@ -90,7 +94,7 @@ public class Controller_Player : MonoBehaviour
     public void OnSlidingEnd()
     {
         animator.SetBool("Sliding", false);
-        collider2D.radius = 0.5f;
+        collider2D.radius = 0.4f;
     }
     private void OnDie()
     {
@@ -112,6 +116,19 @@ public class Controller_Player : MonoBehaviour
         spriteRenderer.enabled = false;
     }
 
+    private void TakeDamage(float damage)
+    {
+        if (isDead) return;
+        health -= damage;
+        Debug.Log($"Player took {damage} damage. Remaining health: {health}");
+        if (health <= 0)
+        {
+            health = 0;
+            OnDie();
+        }
+        //meshRenderer.enabled = !meshRenderer.enabled; // Toggle visibility for damage feedback
+    }   
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Dead" && !isDead)
@@ -119,6 +136,11 @@ public class Controller_Player : MonoBehaviour
             Debug.Log("Player has collided with a deadly object.");
             OnDie();
         }
+        if(other.tag == "Obstacle")
+        {
+            TakeDamage(1.0f);
+        }
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

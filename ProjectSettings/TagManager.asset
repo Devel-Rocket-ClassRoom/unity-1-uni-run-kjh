@@ -4,9 +4,9 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Grounded
   - Ground
   - Dead
+  - Coin
   layers:
   - Default
   - TransparentFX
