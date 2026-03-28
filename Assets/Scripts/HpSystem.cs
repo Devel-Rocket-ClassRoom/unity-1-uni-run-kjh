@@ -5,7 +5,7 @@ public class HpSystem : MonoBehaviour
 {
     public Slider hpSlider;          // Inspector에서 슬라이더를 연결해 주세요.
     public float targetHPPercentage = 1f; // 목표 체력 비율 (0.0 ~ 1.0)
-    public float fillSpeed = 5f;     // 줄어드는 속도 (높을수록 빠름)
+    public float fillSpeed = 5f;  
     public float consumeHp;
     public float hitTime;
     public float hitEff;
@@ -41,7 +41,7 @@ public class HpSystem : MonoBehaviour
         targetHPPercentage -= damagePercentage;
         targetHPPercentage = Mathf.Clamp(targetHPPercentage, 0f, 1f); // 0~1 사이로 고정
     }
-    public void Hit() // 장애물에 부딛혔는지 확인
+    public void Hit() // 장애물에 부딛혔을때
     {
         hitCheck = true;
         hitCount++;
