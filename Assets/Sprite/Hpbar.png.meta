@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8d85de992f2bf3c4ab017fe560e322aa
+guid: f921f2692ae34424e8c1534ed1641a82
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9143868440440847147
-    second: gear_0
+      213: -3700518828988260149
+    second: Hpbar_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gear_0
+      name: Hpbar_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 81
-        height: 43
+        x: 2
+        y: 1
+        width: 266
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b2bb16976eb85ee70800000000000000
-      internalID: 9143868440440847147
+      spriteID: bc0a2813bbd15acc0800000000000000
+      internalID: -3700518828988260149
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      gear_0: 9143868440440847147
+      Hpbar_0: -3700518828988260149
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
