@@ -46,18 +46,18 @@ public class System_Energy : MonoBehaviour
         }
     }
 
-    public void OnHitObstacle()
+    public void OnDownEnergy()
     {
         currentEnergy -= decreaseObstacleEnergyRate;
         currentEnergy = Mathf.Max(0f, currentEnergy);
     }
 
-    public void OnIncreaseEnergy()
+    public void OnUpEnergy()
     {
         currentEnergy += increaseEnergyRate;
         currentEnergy = Mathf.Min(maxEnergy, currentEnergy);
     }
-    public void OnFallIntoVoid()
+    public void OnFall()
     {
         currentEnergy = 0f;
         GameManager.instance.OnPlayerDead(0);

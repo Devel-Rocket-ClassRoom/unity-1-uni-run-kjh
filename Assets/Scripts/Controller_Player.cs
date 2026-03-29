@@ -4,6 +4,9 @@ public class Controller_Player : MonoBehaviour
 {
     public AudioClip deathClip;
     public float jumpForce = 700f;
+    public float coyoteTime = 0.1f;
+    private float coyoteTimeCounter = 0f;
+    private bool isCoyoteActiive = false;
 
     private int jumpCount = 0; 
     private bool isGrounded = false;
@@ -14,9 +17,10 @@ public class Controller_Player : MonoBehaviour
     private AudioSource playerAudio;
 
     private SpriteRenderer spriteRenderer;
+    private HpSystem hpSystem;
 
-    
-    
+
+
     //CircleCollider2D collider2D; 
 
     private float health = 100f;    
@@ -28,10 +32,8 @@ public class Controller_Player : MonoBehaviour
 
     private void Awake()
     {
-        if (deathClip == null)
-        {
-            Debug.LogError("Death clip is not assigned in the inspector.");
-        }
+        
+         
 
         playerRigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -54,24 +56,22 @@ public class Controller_Player : MonoBehaviour
     void Update()
     {
         if(isDead) return;
+        UpdateCoyoteTime();
 
         //if(Input.GetMouseButtonDown(0) && jumpCount < 2)
-        if(Input.GetButtonDown("Fire1")  && jumpCount < 2 )
+        if (Input.GetButtonDown("Fire1")  && jumpCount < 2 )
         {
             jumpCount++;
             playerRigidbody.linearVelocity = Vector2.zero;
             playerRigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            //playerRigidbody.AddForce(new Vector2(0f, jumpForce));
+            
             playerAudio.Play();
         }
         else if(Input.GetButtonUp("Fire1") && playerRigidbody.linearVelocity.y > 0)
         {
             playerRigidbody.linearVelocity *= 0.5f;
         }
-        //else if(Input.GetMouseButtonUp(0) && playerRigidbody.linearVelocity.y > 0)
-        //{
-        //    playerRigidbody.linearVelocity =  playerRigidbody.linearVelocity;
-        //}
+       
 
         if(Input.GetButtonDown("Fire2"))
         {
@@ -101,44 +101,64 @@ public class Controller_Player : MonoBehaviour
     {
         if(isDead) return;
         animator.SetTrigger("Die");
-        playerAudio.PlayOneShot(deathClip);
-        //playerAudio.clip = deathClip;
+        if (deathClip != null)
+        {
+            playerAudio.PlayOneShot(deathClip);
+
+        }
+         
+   
 
         playerAudio.Play();
         playerRigidbody.linearVelocity = Vector2.zero;
 
         isDead = true;
         playerRigidbody.bodyType = RigidbodyType2D.Kinematic;
+         
         GameManager.instance.OnPlayerDead(0);
 
         Debug.Log("Player has died.");
-        spriteRenderer.enabled = false;
+         
     }
 
-    private void TakeDamage(float damage)
+    private void UpdateCoyoteTime()
     {
-        if (isDead) return;
-        health -= damage;
-        Debug.Log($"Player took {damage} damage. Remaining health: {health}");
-        if (health <= 0)
+        if(!isCoyoteActiive) return;
+        coyoteTimeCounter += Time.deltaTime;
+        if(coyoteTimeCounter > coyoteTime)
         {
-            health = 0;
-            OnDie();
+            isCoyoteActiive = false;
+            isGrounded = false;
+
         }
-        //meshRenderer.enabled = !meshRenderer.enabled; // Toggle visibility for damage feedback
-    }   
+    }
+
+    //private void TakeDamage(float damage)
+    //{
+    //    if (isDead) return;
+    //    health -= damage;
+    //    Debug.Log($"Player took {damage} damage. Remaining health: {health}");
+    //    if (health <= 0)
+    //    {
+    //        health = 0;
+    //        OnDie();
+    //    }
+    //    //meshRenderer.enabled = !meshRenderer.enabled; // Toggle visibility for damage feedback
+    //}   
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Dead" && !isDead)
         {
-            Debug.Log("Player has collided with a deadly object.");
-            GetComponent<System_Energy>().OnFallIntoVoid();
-             
+            OnDie();
+           
+            GetComponent<System_Energy>()?.OnFall();
+
         }
         if(other.tag == "Obstacle")
         {
-            GetComponent<System_Energy>().OnHitObstacle();
+             
+            GetComponent<System_Energy>()?.OnDownEnergy();
         }
 
     }
@@ -161,6 +181,8 @@ public class Controller_Player : MonoBehaviour
         {
             isGrounded = true;
             jumpCount = 0;
+            isCoyoteActiive = false;
+            coyoteTimeCounter = 0;
         }
     }
 
@@ -170,6 +192,11 @@ public class Controller_Player : MonoBehaviour
         //{
         //    isGrounded = false;
         //}
-        isGrounded = false;
+        if(collision.collider.CompareTag("Ground"))
+        {
+            isCoyoteActiive = true;
+            coyoteTimeCounter = 0;
+        }
+        //isGrounded = false;
     }
 }

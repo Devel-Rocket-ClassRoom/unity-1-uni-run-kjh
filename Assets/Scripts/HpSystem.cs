@@ -12,6 +12,7 @@ public class HpSystem : MonoBehaviour
     public int hitCount;
 
     private bool hitCheck;
+    public Controller_Player player;
     private void Start()
     {
         consumeHp = 0;
@@ -34,12 +35,16 @@ public class HpSystem : MonoBehaviour
             TakeDamage(0.1f);  //장애물에 부딛혔으면 10%체력을깎음
             hitCheck = false;
         }
+        
     }
 
     public void TakeDamage(float damagePercentage)
     {
+        if (targetHPPercentage <= 0f) return;
+
         targetHPPercentage -= damagePercentage;
         targetHPPercentage = Mathf.Clamp(targetHPPercentage, 0f, 1f); // 0~1 사이로 고정
+        
     }
     public void Hit() // 장애물에 부딛혔을때
     {

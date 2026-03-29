@@ -21,11 +21,11 @@ public class Item : MonoBehaviour
             {
                 case ItemType.Coin:
                     GameManager.instance.AddScore(100);
-                    energy?.OnIncreaseEnergy();
+                    energy?.OnUpEnergy();
                     break;
 
                 case ItemType.Obstacle:
-                    energy?.OnHitObstacle();
+                    energy?.OnDownEnergy();
                     break;
 
                 
