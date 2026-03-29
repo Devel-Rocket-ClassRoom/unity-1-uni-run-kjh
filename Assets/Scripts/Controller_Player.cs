@@ -15,9 +15,9 @@ public class Controller_Player : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
-    private bool shoudStopSliding = false;
     
-    CircleCollider2D collider2D; 
+    
+    //CircleCollider2D collider2D; 
 
     private float health = 100f;    
     //MeshRenderer meshRenderer;
@@ -37,7 +37,8 @@ public class Controller_Player : MonoBehaviour
         animator = GetComponent<Animator>();
         playerAudio = GetComponent<AudioSource>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        collider2D = GetComponent<CircleCollider2D>();
+         
+        //collider2D = GetComponent<CircleCollider2D>();
         //meshRenderer = GetComponent<MeshRenderer>();
         spriteRenderer.enabled = false; // Hide the player sprite at the start
 
@@ -76,7 +77,7 @@ public class Controller_Player : MonoBehaviour
         {
             animator.SetBool("Slide", true);
             animator.SetBool("Sliding", true);
-            collider2D.radius = 0.3f;
+            //collider2D.radius = 0.3f;
         }
         if (Input.GetButtonUp("Fire2"))
         {
@@ -94,9 +95,9 @@ public class Controller_Player : MonoBehaviour
     public void OnSlidingEnd()
     {
         animator.SetBool("Sliding", false);
-        collider2D.radius = 0.4f;
+        //collider2D.radius = 0.4f;
     }
-    private void OnDie()
+    public void OnDie()
     {
         if(isDead) return;
         animator.SetTrigger("Die");
@@ -108,9 +109,7 @@ public class Controller_Player : MonoBehaviour
 
         isDead = true;
         playerRigidbody.bodyType = RigidbodyType2D.Kinematic;
-
-        GameManager gameManager = Object.FindFirstObjectByType<GameManager>();
-        gameManager.OnPlayerDead(0);
+        GameManager.instance.OnPlayerDead(0);
 
         Debug.Log("Player has died.");
         spriteRenderer.enabled = false;
@@ -134,11 +133,12 @@ public class Controller_Player : MonoBehaviour
         if(other.tag == "Dead" && !isDead)
         {
             Debug.Log("Player has collided with a deadly object.");
-            OnDie();
+            GetComponent<System_Energy>().OnFallIntoVoid();
+             
         }
         if(other.tag == "Obstacle")
         {
-            TakeDamage(1.0f);
+            GetComponent<System_Energy>().OnHitObstacle();
         }
 
     }

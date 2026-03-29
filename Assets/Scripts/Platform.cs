@@ -18,6 +18,7 @@ public class Platform : MonoBehaviour
 
     private void OnEnable()
     {
+        Debug.Log($"[Platform] OnEnable - {gameObject.name}");
         stepped = false; // Reset the stepped flag when the platform is enabled
         for(int i = 0; i < obstacles.Length; i++)
         {
@@ -38,6 +39,7 @@ public class Platform : MonoBehaviour
         if(collision.gameObject.CompareTag("Player") && !stepped)
         {
             stepped = true; // Set the stepped flag to true when the player steps on the platform
+            Debug.Log($"[Platform] Player stepped on {gameObject.name}");
             GameManager.instance.AddScore(1); // Increase the score by 1
             // You can add any additional logic here that should happen when the player steps on the platform
         }

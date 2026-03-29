@@ -19,7 +19,7 @@ public class Platform_Spawn : MonoBehaviour
 
     private void OnEnable()
     {
-        
+        Debug.Log($"[Platform_Spawn] OnEnable - {gameObject.name}");
 
         foreach(var obstacle in obsatacles)
         {
@@ -34,6 +34,7 @@ public class Platform_Spawn : MonoBehaviour
         if(collision.gameObject.CompareTag("Player") && !isStepped)
         {
             isStepped = true;
+            Debug.Log($"[Platform_Spawn] Player stepped on {gameObject.name}");
             GameManager.instance.AddScore(1);
         }
     }
