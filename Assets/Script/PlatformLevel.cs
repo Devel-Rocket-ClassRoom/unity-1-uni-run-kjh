@@ -5,16 +5,18 @@ public class PlatformLevel : MonoBehaviour
     public GameObject[] platforms;
     public int level;
     public float spawnTime;
-    //public GameManager gameManager;
 
     private void Start()
     {
-         
+
 
     }
     void Update()
     {
-        if (GameManager.instance.isGameOver) return;
+        if (GameManager.instance.isGameOver)
+        {
+            return;
+        }
         spawnTime += Time.deltaTime;
         level = Random.Range(0, platforms.Length);
         if(spawnTime>=2.9f)
