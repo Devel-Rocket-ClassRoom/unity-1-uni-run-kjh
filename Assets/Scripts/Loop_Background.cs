@@ -10,7 +10,7 @@ public class Loop_Background : MonoBehaviour
     {
         BoxCollider2D backgroundCollider = GetComponent<BoxCollider2D>();
         // Get the width of the background image using the SpriteRenderer component
-        width = backgroundCollider.size.x;
+       /* width = backgroundCollider.size.x;*/
 
     }
 

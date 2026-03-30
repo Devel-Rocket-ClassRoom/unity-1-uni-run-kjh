@@ -26,7 +26,7 @@ public class Item : MonoBehaviour
             switch (itemType)
             {
                 case ItemType.Coin:
-                    GameManager.instance.AddScore(100);
+                    GameManager.instance.AddScore(1111);
                     break;
 
                 case ItemType.Obstacle:
@@ -34,10 +34,11 @@ public class Item : MonoBehaviour
                     break;
 
                 case ItemType.Jelly:
-                    GameManager.instance.AddScore(1111);
+                    GameManager.instance.AddScore(20000);
                     break;
                 case ItemType.Potion:
                     energy?.OnUpEnergy();
+                    GameManager.instance.AddScore(500);
                     break;
             }
 
