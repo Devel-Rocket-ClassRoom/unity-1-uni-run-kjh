@@ -16,8 +16,7 @@ public class HpSystem : MonoBehaviour
     private void Start()
     {
         consumeHp = 0;
-        hitCount = 0;
-        hitCheck = false;
+        hitTime = 3f;
     }
     void Update()
     {
@@ -30,12 +29,6 @@ public class HpSystem : MonoBehaviour
             TakeDamage(0.01f);
             consumeHp = 0;
         }
-        if (hitCheck)   //장애물에 부딛혔는지 확인
-        {
-            TakeDamage(0.1f); //장애물에 부딛혔으면 10%체력을깎음
-            hitCheck= false;
-        }
-
     }
 
     public void TakeDamage(float damagePercentage)
@@ -48,23 +41,16 @@ public class HpSystem : MonoBehaviour
     }
     public void Hit() // 장애물에 부딛혔을때
     {
-        if(hitTime>3f)
+        if(hitTime>=3f)
         {
-            hitCheck = true;
-            hitCount++;
+            TakeDamage(0.1f); //장애물에 부딛혔으면 10%체력을깎음
             hitTime = 0;
         }
        
     }
     public bool Invincible()
     {
-        if(hitCheck)
-        {
-            return hitTime < 3f; // 3초동안 무적
-        }
-        else
-        {
-            return false;
-        }
+        return hitTime < 3f; // 3초동안 무적
+
     }
 }

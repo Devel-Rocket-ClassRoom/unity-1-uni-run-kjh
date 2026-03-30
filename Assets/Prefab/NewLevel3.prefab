@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &114387669851465952
 GameObject:
@@ -283,6 +284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &148443247535055686
 GameObject:
@@ -425,6 +427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &203620513051931166
 GameObject:
@@ -567,6 +570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &239284229233124350
 GameObject:
@@ -709,6 +713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &290617804428560715
 GameObject:
@@ -851,6 +856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &327973514188993130
 GameObject:
@@ -993,6 +999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &525722696314381268
 GameObject:
@@ -1135,6 +1142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &579849629785306426
 GameObject:
@@ -1277,6 +1285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &583271147864334106
 GameObject:
@@ -1601,6 +1610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &1110933893807573163
 GameObject:
@@ -1743,6 +1753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &1266031905063385258
 GameObject:
@@ -1773,7 +1784,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 13, y: -0.5, z: 0}
-  m_LocalScale: {x: 0.29999998, y: 0.29999998, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2819063889046591834}
@@ -1827,7 +1838,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1086197501266087201, guid: cb540694073309f4aaec2b3b60f92929, type: 3}
+  m_Sprite: {fileID: 6568769548595372064, guid: 3972d8d28b94cbe4ea9d9595580a158b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1885,7 +1896,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
-  itemType: 0
+  hpSystem: {fileID: 0}
+  itemType: 3
 --- !u!1 &1271527994670329905
 GameObject:
   m_ObjectHideFlags: 0
@@ -2027,6 +2039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &1348171141487420123
 GameObject:
@@ -2169,6 +2182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &1517968137081202399
 GameObject:
@@ -2311,6 +2325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &1741314983196245148
 GameObject:
@@ -2453,6 +2468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &1891505696692435580
 GameObject:
@@ -2595,6 +2611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &2046316746317464175
 GameObject:
@@ -2828,6 +2845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &2278376795667235509
 GameObject:
@@ -2970,6 +2988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &2373098331425489183
 GameObject:
@@ -3294,6 +3313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &2732453805341665538
 GameObject:
@@ -3436,6 +3456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &2783806429191778528
 GameObject:
@@ -3466,7 +3487,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 13.5, y: -0.5, z: 0}
-  m_LocalScale: {x: 0.29999998, y: 0.29999998, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2819063889046591834}
@@ -3520,7 +3541,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1086197501266087201, guid: cb540694073309f4aaec2b3b60f92929, type: 3}
+  m_Sprite: {fileID: 6568769548595372064, guid: 3972d8d28b94cbe4ea9d9595580a158b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3578,7 +3599,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
-  itemType: 0
+  hpSystem: {fileID: 0}
+  itemType: 3
 --- !u!1 &2825806728346506681
 GameObject:
   m_ObjectHideFlags: 0
@@ -3858,6 +3880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &3006257623827581006
 GameObject:
@@ -4000,6 +4023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &3014049244391916148
 GameObject:
@@ -4142,6 +4166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &3057962905922630116
 GameObject:
@@ -4284,6 +4309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &3141654057365936477
 GameObject:
@@ -4426,6 +4452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &3302228355237301684
 GameObject:
@@ -4547,7 +4574,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 12, y: -0.5, z: 0}
-  m_LocalScale: {x: 0.29999998, y: 0.29999998, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2819063889046591834}
@@ -4601,7 +4628,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1086197501266087201, guid: cb540694073309f4aaec2b3b60f92929, type: 3}
+  m_Sprite: {fileID: 6568769548595372064, guid: 3972d8d28b94cbe4ea9d9595580a158b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4659,7 +4686,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
-  itemType: 0
+  hpSystem: {fileID: 0}
+  itemType: 3
 --- !u!1 &3798744584382784875
 GameObject:
   m_ObjectHideFlags: 0
@@ -4801,6 +4829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &4006101580720285595
 GameObject:
@@ -4943,6 +4972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &4511542216774016775
 GameObject:
@@ -5358,6 +5388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &5140743708899031004
 GameObject:
@@ -5638,6 +5669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &5250712735841779939
 GameObject:
@@ -5871,6 +5903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &5402393555884047150
 GameObject:
@@ -5901,7 +5934,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 12.5, y: -0.5, z: 0}
-  m_LocalScale: {x: 0.29999998, y: 0.29999998, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2819063889046591834}
@@ -5955,7 +5988,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1086197501266087201, guid: cb540694073309f4aaec2b3b60f92929, type: 3}
+  m_Sprite: {fileID: 6568769548595372064, guid: 3972d8d28b94cbe4ea9d9595580a158b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6013,7 +6046,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
-  itemType: 0
+  hpSystem: {fileID: 0}
+  itemType: 3
 --- !u!1 &5690548245697013560
 GameObject:
   m_ObjectHideFlags: 0
@@ -6155,6 +6189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &6003112723023070320
 GameObject:
@@ -6466,6 +6501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &6228043601226000082
 GameObject:
@@ -6608,6 +6644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &6233202063782487667
 GameObject:
@@ -6750,6 +6787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &6340263161995866607
 GameObject:
@@ -6892,6 +6930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &6615771987815763271
 GameObject:
@@ -7034,6 +7073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &6616828132866663897
 GameObject:
@@ -7238,6 +7278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Object_Scrolling
   scrollSpeed: 10
+  returnposX: -50
 --- !u!1 &6826440913478625661
 GameObject:
   m_ObjectHideFlags: 0
@@ -7608,6 +7649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &7426656312819436247
 GameObject:
@@ -7888,6 +7930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &7511748042547985461
 GameObject:
@@ -8030,6 +8073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &8035220596695997488
 GameObject:
@@ -8263,6 +8307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &8096413258593431801
 GameObject:
@@ -8405,6 +8450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &8299929245794981811
 GameObject:
@@ -8547,6 +8593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &8950493302223822929
 GameObject:
@@ -8689,6 +8736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0
 --- !u!1 &8971261209794957160
 GameObject:
@@ -8831,4 +8879,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ad7fca0c13444a8bb9be2c12b8151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
+  hpSystem: {fileID: 0}
   itemType: 0

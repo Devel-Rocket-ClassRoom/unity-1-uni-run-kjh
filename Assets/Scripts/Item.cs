@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-
+    public HpSystem hpSystem; // 장애물 충돌 시 HP 감소를 위해 참조
     public enum ItemType
     {
         Coin,
@@ -12,6 +12,10 @@ public class Item : MonoBehaviour
     }
 
     public ItemType itemType = ItemType.Coin; // Inspector에서 타입 선택
+    private void Start()
+    {
+        hpSystem = GetComponent<HpSystem>();
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -26,7 +30,7 @@ public class Item : MonoBehaviour
                     break;
 
                 case ItemType.Obstacle:
-                    energy?.OnDownEnergy();
+                    hpSystem.Hit();
                     break;
 
                 case ItemType.Jelly:
