@@ -49,6 +49,7 @@ public class Controller_Player : MonoBehaviour
     private void Start()
     {
         spriteRenderer.enabled = true;
+        hpSystem = GetComponent<HpSystem>();
     }
      
 
@@ -57,7 +58,23 @@ public class Controller_Player : MonoBehaviour
     {
         if(isDead) return;
         UpdateCoyoteTime();
+        if (hpSystem.Invincible() == true)
+        {
+            if (Time.time % 0.2f < 0.1f)
+            {
+                spriteRenderer.color = new Color(1, 1, 1, 0.2f);
+            }
+            else
+            {
+                spriteRenderer.color = new Color(1, 1, 1, 1.0f);
+            }
+        }
+        else
+        {
+            spriteRenderer.color = Color.white;
+        }
 
+    
         //if(Input.GetMouseButtonDown(0) && jumpCount < 2)
         if (Input.GetButtonDown("Fire1")  && jumpCount < 2 )
         {

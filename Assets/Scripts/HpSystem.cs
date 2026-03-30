@@ -24,18 +24,18 @@ public class HpSystem : MonoBehaviour
         // 실제 슬라이더의 값을 목표값으로 부드럽게 이동시킴
         hpSlider.value = Mathf.Lerp(hpSlider.value, targetHPPercentage, Time.deltaTime * fillSpeed);
         consumeHp += Time.deltaTime;
+        hitTime += Time.deltaTime;
         if(consumeHp >1)  //초당1%씩 체력을 깎음
         {
             TakeDamage(0.01f);
             consumeHp = 0;
         }
-        if(hitCheck)   //장애물에 부딛혔는지 확인
+        if (hitCheck)   //장애물에 부딛혔는지 확인
         {
-
-            TakeDamage(0.1f);  //장애물에 부딛혔으면 10%체력을깎음
-            hitCheck = false;
+            TakeDamage(0.1f); //장애물에 부딛혔으면 10%체력을깎음
+            hitCheck= false;
         }
-        
+
     }
 
     public void TakeDamage(float damagePercentage)
@@ -48,7 +48,23 @@ public class HpSystem : MonoBehaviour
     }
     public void Hit() // 장애물에 부딛혔을때
     {
-        hitCheck = true;
-        hitCount++;
+        if(hitTime>3f)
+        {
+            hitCheck = true;
+            hitCount++;
+            hitTime = 0;
+        }
+       
+    }
+    public bool Invincible()
+    {
+        if(hitCheck)
+        {
+            return hitTime < 3f; // 3초동안 무적
+        }
+        else
+        {
+            return false;
+        }
     }
 }
